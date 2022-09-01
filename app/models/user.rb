@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
 validates :name, presence: true
 
-#has_many :places
-#has_many :comments, dependent: :destroy
+has_many :places
+has_many :comments, dependent: :destroy
 
 end

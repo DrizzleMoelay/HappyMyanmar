@@ -1,0 +1,7 @@
+<div class="card">
+  <%= link_to image_tag(place.image, class: :card__img ), place_path(place.id), method: :get %>
+  <div class="card__body">
+    <%= link_to place.title, place_path(place.id), method: :get, class: :card__title%>
+    <%= link_to "by #{place.user.name}", user_path(place.user.id), class: :card__user %>
+  </div>
+</div>
