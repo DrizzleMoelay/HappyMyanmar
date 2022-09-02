@@ -1,0 +1,14 @@
+<main class="main">
+  <div class="inner">
+    <% if user_signed_in? %>
+      <div class="greeting">
+        <%= link_to "こんにちは、#{current_user.name}さん", user_path(current_user) %>
+    <% else %>
+        <% link_to "新規登録", new_user_registration_path, class: :greeting__link%>
+      </div> 
+    <% end %>
+    <div class="card__wrapper">
+      <%# <%= render partial: "place", collection: @places %> 
+    </div>
+  </div>
+</main>
